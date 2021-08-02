@@ -3,6 +3,8 @@ const Campground = require('../models/campground');
 
 
 
+
+
 module.exports.index = async (req, res) => {
 	const campgrounds = await Campground.find({}).sort({ "title": 1 });
 	res.render('campgrounds/index', { campgrounds })
